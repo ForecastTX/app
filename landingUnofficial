@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to State Farm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e2231a;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        img {
+            width: 200px;
+        }
+        .welcome-text {
+            font-size: 2rem;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/State_Farm_logo.svg/512px-State_Farm_logo.svg.png" alt="State Farm Logo">
+        <div class="welcome-text" id="welcomeText">Like a Good Neighbor, State Farm is There.</div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            document.getElementById("welcomeText").style.opacity = 1;
+        };
+    </script>
+</body>
+</html>
