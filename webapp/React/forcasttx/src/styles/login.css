@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #e2231a;
+    font-family: 'Arial Black', sans-serif;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e2231a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+button:hover {
+    background-color: #c91d16;
+    transform: scale(1.05);
+}
+
+/* Create Account Button - Smaller & Outlined */
+#createAccountBtn {
+    background-color: white;
+    color: #e2231a;
+    border: 2px solid #e2231a;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 10px; /* Add spacing between buttons */
+}
+#createAccountBtn:hover {
+    background-color: #f8d7da;
+    transform: scale(1.05);
+}
