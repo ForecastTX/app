@@ -65,6 +65,8 @@ forecasttx-react/
 
 ## Future Enhancements
 - Implement backend authentication
+- Implement ML algoritm
+- Implement the "Dashboard" section
 - Store user data securely
 - Improve UI/UX with animations and better responsiveness
 
