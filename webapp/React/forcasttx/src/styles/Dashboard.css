@@ -1,0 +1,92 @@
+/* Dashboard Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Slightly different background for the dashboard */
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #e2231a;
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tabs button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    color: #333;
+}
+
+.tabs button.active {
+    background-color: #e2231a;
+    color: white;
+    border: none;
+    
+}
+
+.tabs button:hover {
+    background-color: #9f3d3d;
+    transform: scale(1.05);
+    
+}
+
+/* Tab Content */
+.tab-content {
+    text-align: center;
+}
+
+.overview-content, .detailed-content {
+    display: none;
+}
+
+.overview-content.active, .detailed-content.active {
+    display: block;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Optional: Add any additional styling for the content if needed */
