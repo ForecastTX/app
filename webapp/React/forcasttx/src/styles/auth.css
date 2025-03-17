@@ -1,36 +1,104 @@
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: white;
+    color: black;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-.container {
+
+
+.auth-container {
     width: 300px;
-    margin: 100px auto;
     padding: 20px;
-    border: 1px solid #d32d27;
+    margin: 100px auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
 }
-img {
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.auth-logo {
     width: 100px;
     margin-bottom: 10px;
 }
-h2 {
-    color: #d32d27;
+
+
+.auth-subtitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #e2231a;
+    font-family: 'Arial Black', sans-serif;
 }
-input, button {
-    width: 100%;
+
+
+.auth-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.auth-input {
+    width: 80%;
     padding: 10px;
-    margin: 5px 0;
+    margin: 10px 0;
     border: 1px solid #d32d27;
     border-radius: 5px;
+    box-sizing: border-box;
 }
-button {
+
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
     background-color: #d32d27;
     color: white;
-    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
 }
-button:hover {
+
+.auth-btn:hover {
     background-color: #a1201c;
+    transform: scale(1.05);
+}
+
+
+.back-to-login-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #fff;
+    color: d32d27;
+    border: 2px solid #e2231a;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.back-to-login-btn:hover {
+    background-color: #f8d7da;
+    transform: scale(1.05);
 }

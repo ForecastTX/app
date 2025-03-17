@@ -1,15 +1,10 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
-import "./styles/login.css";
-import "./styles/landing.css";
-import "./styles/auth.css";
-import "./styles/Dashboard.css"
+
 import Login from "./Componets/Login";
 import CreateAccount from "./Componets/CreateAccount";
 import Landing from "./Componets/Landing";
 import Dashboard from "./Componets/Dashboard";
-
-
 
 function App() {
     return (

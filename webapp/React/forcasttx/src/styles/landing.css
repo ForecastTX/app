@@ -1,27 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e2231a ;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e2231a;
-            color: white;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        img {
-            width: 200px;
-            background-color: white;
-            padding: 10px;
-            border-radius: 10px;
-        }
-        .welcome-text {
-            font-size: 2rem;
-            font-weight: bold;
-            opacity: 0;
-            transition: opacity 2s ease-in-out;
-        }
+
+.landing-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: slideDown 1.5s ease-out forwards;
+}
+
+
+.landing-welcome-text {
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 0.5s forwards;
+}
+
+
+.landing-logo {
+    width: 200px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.landing-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+    from {
+        top: 30%;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
