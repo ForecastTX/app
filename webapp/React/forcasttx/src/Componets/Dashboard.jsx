@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../styles/Dashboard.css";
+import TexasMap from './TexasMap';
+import Overview from './Overview';
+import MLRegression from './MLRegression';
+import PastVsAi from './PastVsAi';
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('overview'); // State to track active tab
   const navigate = useNavigate();
+  const [selectedSeason, setSelectedSeason] = useState(''); // Track selected season
+
+  const handleSeasonChange = (season) => {
+    setSelectedSeason(season);
+  };
 
   return (
     <div className="dashboard-container">
@@ -28,10 +37,48 @@ const Dashboard = () => {
 
       {/* Tab content */}
       <div className="dashboard-tab-content">
+        {/* Overview Section */}
         <div className={`overview-content ${activeTab === 'overview' ? 'active' : ''}`}>
           <h2>Overview</h2>
           <p>This is the overview section of the dashboard.</p>
+
+          <div className="overview-layout">
+  {/* Left Side - Charts */}
+  <div className="left-side">
+    <div className="Season-box">
+      <h3>Select Season</h3>
+      {/* Button or Dropdown for selecting season */}
+      <div>
+        <button onClick={() => handleSeasonChange('Winter')}>Winter</button>
+        <button onClick={() => handleSeasonChange('Spring')}>Spring</button>
+        <button onClick={() => handleSeasonChange('Summer')}>Summer</button>
+        <button onClick={() => handleSeasonChange('Fall')}>Fall</button>
+      </div>
+      <p>Selected Season: {selectedSeason}</p>
+    </div>
+
+    <div className="charts">
+      <div className="MLRegression-box">
+        {/* Here, integrate ML chart or placeholder */}
+        <MLRegression/>
+      </div>
+      <div className="PastVsAi-box">
+
+        <PastVsAi/>
+        {/* Here, integrate comparison chart or placeholder */}
+      </div>
+    </div>
+  </div>
+
+  {/* Right Side - Texas Map */}
+  <div className="right-side">
+    <h3>Map of Texas</h3>
+    <TexasMap />
+  </div>
+</div>
         </div>
+
+        {/* Detailed Section */}
         <div className={`detailed-content ${activeTab === 'detailed' ? 'active' : ''}`}>
           <h2>Detailed Information</h2>
           <p>This is the detailed section of the dashboard.</p>
