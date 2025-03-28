@@ -204,3 +204,60 @@ p {
     background-color: #f8d7da;
     transform: scale(1.05);
 }
+.detailed-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    gap: 20px; /* Add space between the sections */
+    padding: 20px;
+}
+
+.detailed-content .KPI {
+    width: 100%; /* Ensure KPIs take up full width */
+    display: flex;
+    justify-content: space-around; /* Space the KPIs evenly */
+    gap: 20px; /* Space between each KPI */
+}
+
+.detailed-content .KPI:first-child {
+    margin-top: 0; /* Ensure no extra margin above the first KPI */
+}
+
+.KPI {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px; /* Ensure each KPI has a minimum width */
+    text-align: center;
+}
+
+.KPI h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.KPI p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.KPI .change {
+    font-size: 1.1rem;
+    color: green;
+    font-weight: bold;
+}
+
+.KPI .trend {
+    font-size: 1rem;
+    color: #d32d27; /* Adjust trend color based on the trend value */
+}
+
+/* Optional: Add responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+    .detailed-content .KPI {
+        flex: 1 1 100%; /* On smaller screens, make each KPI full width */
+        margin-bottom: 20px; /* Add spacing between KPIs on small screens */
+    }
+}

@@ -13,8 +13,8 @@ const MLRegression = () => {
       {
         label: 'ML Regression Model',  // Label for the line
         data: [12, 19, 3, 5, 2, 3, 8], // Fake data points for the regression line
-        borderColor: 'rgba(75,192,192,1)',  // Line color
-        backgroundColor: 'rgba(75,192,192,0.2)',  // Fill color
+        borderColor: 'rgb(183, 72, 72)',  // Line color
+        backgroundColor: 'rgba(192, 75, 75, 0.2)',  // Fill color
         fill: true,  // To fill the area under the line
       },
     ],

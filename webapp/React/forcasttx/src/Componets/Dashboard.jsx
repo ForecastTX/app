@@ -5,6 +5,8 @@ import TexasMap from './TexasMap';
 import Overview from './Overview';
 import MLRegression from './MLRegression';
 import PastVsAi from './PastVsAi';
+import KPI from './KPI';
+import TopRegions from './TopRegions';
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('overview'); // State to track active tab
@@ -14,6 +16,13 @@ const Dashboard = () => {
   const handleSeasonChange = (season) => {
     setSelectedSeason(season);
   };
+
+  const regionsData = [
+    { name: 'Dallas', hailEvents: 45, totalDamage: '$3.2 Million' },
+    { name: 'Houston', hailEvents: 30, totalDamage: '$2.5 Million' },
+    { name: 'Austin', hailEvents: 25, totalDamage: '$1.8 Million' },
+    { name: 'San Antonio', hailEvents: 20, totalDamage: '$1.2 Million' },
+  ];
 
   return (
     <div className="dashboard-container">
@@ -80,8 +89,20 @@ const Dashboard = () => {
 
         {/* Detailed Section */}
         <div className={`detailed-content ${activeTab === 'detailed' ? 'active' : ''}`}>
-          <h2>Detailed Information</h2>
-          <p>This is the detailed section of the dashboard.</p>
+        <div className='KPI-Section'>
+        {/* KPI for top city in texas */}
+        <KPI
+        title="Top City for Hail in Texas"
+        value="Dallas"
+        change="+15%"
+        trend="up"
+      />
+      
+      </div>
+     <TopRegions 
+        title="Top Affected Regions" 
+        regionsData={regionsData} 
+      />
         </div>
       </div>
 
