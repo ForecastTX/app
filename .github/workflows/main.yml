@@ -21,26 +21,27 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd webapp/React/forcasttx  # Navigate to the directory containing package.json
+          cd webapp/React/forcasttx
           npm ci
 
-      #- name: Run ESLint
-#        run: |
-        #  cd webapp/React/forcasttx  # Navigate to the directory containing package.json
-       #   npm run lint
-          
-      - name: Run Code Review with ChatGPT
+      - name: Run ESLint
         run: |
-         cd webapp/js
-         node reviewCode.js  # Assuming reviewCode.js is the script you created above
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} 
-     
+          cd webapp/React/forcasttx
+          npm run lint
+
       - name: Build React App
         run: |
-          cd webapp/React/forcasttx  # Navigate to the directory containing package.json
+          cd webapp/React/forcasttx
           npm run build
-      - name: start React App
+
+      - name: Set up Code Review Dependencies
         run: |
-          cd webapp/React/forcasttx  # Navigate to the directory containing package.json
-          npm start
+          cd webapp/js
+          npm install openai
+
+      - name: Run Code Review with ChatGPT
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          cd webapp/js
+          node reviewCode.js
