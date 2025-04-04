@@ -2,6 +2,9 @@ import OpenAI from 'openai';
 import fs from 'fs';
 import path from 'path';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // Initialize the OpenAI client
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,  // Ensure you've set this environment variable
