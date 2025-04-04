@@ -48,7 +48,10 @@ const Dashboard = () => {
       <div className="dashboard-tab-content">
         {activeTab === 'overview' && (
           <div className="overview-content">
-            
+            <div className="overview-headder"> 
+            <h2>Overview</h2>
+            <p>This is the overview section of the dashboard.</p>
+          </div>
             <div className="overview-layout">
               {/* Left Side - Controls and Charts */}
               <div className="left-side">
