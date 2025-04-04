@@ -31,7 +31,7 @@ jobs:
           
       - name: Run Code Review with ChatGPT
         run: |
-         cd webapp/React/forcasttx
+         cd webapp/js
          node reviewCode.js  # Assuming reviewCode.js is the script you created above
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}  # Add your OpenAI API key to GitHub Secrets
