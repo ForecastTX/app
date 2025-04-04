@@ -5,12 +5,12 @@ const TexasMap = () => {
   const svgRef = useRef();
 
   useEffect(() => {
-    const width = 800;
-    const height = 500;
+    const width = 600;
+    const height = 400;
 
     // Create projection for Texas
     const projection = d3.geoMercator()
-      .scale(2050) // Adjust scale for better fit
+      .scale(1050) // Adjust scale for better fit
       .center([-99.5, 31]) // Center on Texas
       .translate([width / 2, height / 2]);
 
