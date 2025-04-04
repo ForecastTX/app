@@ -20,6 +20,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "lint": "eslint .",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,8 +45,17 @@
     ]
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.27.0",
     "autoprefixer": "^10.4.21",
+    "eslint": "^9.23.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.0.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.0.14"
-  }
+  },
+  "description": "## Overview This is a React-based authentication and landing page for ForecastTX. The app includes a login page, a landing page with a redirect, and an email authorization check for account creation.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
