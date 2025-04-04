@@ -1,5 +1,6 @@
 import OpenAI from 'openai';
 import fs from 'fs';
+import { fileURLToPath } from 'url';  // Import the function
 import path from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
