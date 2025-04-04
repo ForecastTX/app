@@ -27,7 +27,7 @@ jobs:
       - name: Run ESLint
         run: |
           cd webapp/React/forcasttx
-          #npm run lint
+          npm run lint
 
       - name: Build React App
         run: |
