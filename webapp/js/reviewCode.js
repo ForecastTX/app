@@ -1,6 +1,6 @@
 import OpenAI from 'openai';
 import fs from 'fs';
-import { fileURLToPath } from 'url';  // Import the function
+import { fileURLToPath } from 'url';
 import path from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -17,7 +17,7 @@ async function reviewCode(filePath) {
 
   try {
     const response = await openai.chat.completions.create({
-      model: 'gpt-4',  // Specify the model you want to use
+      model: 'gpt-3.5-turbo',  // ✅ Updated model to 3.5
       messages: [
         {
           role: 'user',
