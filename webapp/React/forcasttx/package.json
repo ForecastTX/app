@@ -11,6 +11,7 @@
     "chart.js": "^4.4.8",
     "chartjs-chart-geo": "^4.3.4",
     "d3": "^7.9.0",
+    "openai": "^4.91.1",
     "react": "^19.0.0",
     "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.0.0",
