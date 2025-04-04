@@ -46,3 +46,7 @@ jobs:
         run: |
           cd webapp/js
           node reviewCode.js
+      - name: start app
+        run: |
+          cd webapp/React/forcasttx
+          npm start
