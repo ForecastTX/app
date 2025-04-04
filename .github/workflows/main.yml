@@ -24,9 +24,9 @@ jobs:
           cd webapp/React/forcasttx
           npm ci
 
-      #- name: Run ESLint
-        #run: |
-         # cd webapp/React/forcasttx
+      - name: Run ESLint
+        run: |
+          cd webapp/React/forcasttx
           #npm run lint
 
       - name: Build React App
